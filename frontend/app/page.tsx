@@ -7,10 +7,20 @@ import ProductHeader from '../components/ProductHeader';
 import SearchBar from '../components/SearchBar';
 import { backend_url } from "../config.js";
 
+interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  quantity: number;
+}
+
 const HomePage = () => {
   const router = useRouter();
-  const [products, setProducts] = useState([]); // Original product list from the API
-  const [filteredProducts, setFilteredProducts] = useState([]); // Filtered product list
+  // Define products and filteredProducts with explicit Product[] type
+const [products, setProducts] = useState<Product[]>([]);
+const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+
 
   // Fetch products from the backend API when the component mounts
   useEffect(() => {
