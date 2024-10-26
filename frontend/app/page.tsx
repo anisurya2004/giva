@@ -64,7 +64,7 @@ const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   };
 
   // Function to handle edit
-  const handleEdit = (product) => {
+  const handleEdit = (product:Product) => {
     // Navigate to the edit page with query parameters
     const query = new URLSearchParams({
       id: product.id.toString(),
