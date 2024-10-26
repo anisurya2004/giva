@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #d6dce3;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #d6dce3;
+    --foreground: #1e1b1b;
+  }
+}
+
+body {
+  background-color: var(--background) !important;  /* Use the custom background color */
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.custom-header-bg {
+  background-color: #3c6eaa; /* Blue shade for header background */
+  color: #ffffff; /* White text for contrast */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px 0;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  width: 100%;
+  max-width: 600px; /* Centered and limited width */
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.header-subtitle {
+  font-size: 1.2rem;
+  color: #e0e0e0; /* Softer gray for subtitle text */
+}
