@@ -1,5 +1,4 @@
 import ProductForm from '../components/form';
-import { useRouter } from 'next/router';
 
 const AddProductPage = () => {
   return (
